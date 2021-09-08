@@ -9,7 +9,7 @@ categoriesRoutes.post("/categories", (request, response) => {
 
     categories.push({ name, description });
 
-    return response.status(201);
+    return response.status(201).send(categories);
 });
 
 export { categoriesRoutes };
