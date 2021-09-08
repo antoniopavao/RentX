@@ -6,7 +6,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use(categoriesRoutes);
+app.use("/categories", categoriesRoutes);
 
 const port = 3333;
 
