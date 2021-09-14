@@ -1,3 +1,0 @@
-class Specification {}
-
-export { Specification };
