@@ -1,0 +1,3 @@
+class Specification {}
+
+export { Specification };
