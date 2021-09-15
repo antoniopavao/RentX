@@ -7,8 +7,18 @@ import {
 class CategoriesRepository implements ICategoriesRepository {
     private categories: Category[];
 
-    constructor() {
+    private static INSTANCE: CategoriesRepository;
+
+    private constructor() {
         this.categories = [];
+    }
+
+    public static getInstance(): CategoriesRepository {
+        if (!CategoriesRepository.INSTANCE) {
+            CategoriesRepository.INSTANCE = new CategoriesRepository();
+        }
+
+        return CategoriesRepository.INSTANCE;
     }
 
     create({ description, name }: ICreateCategoryDTO): void {
@@ -25,10 +35,12 @@ class CategoriesRepository implements ICategoriesRepository {
 
     findByName(name: string): Category {
         const category = this.categories.find(
-            (category) => category.name === name
+            (category) => category.name.toLowerCase() === name.toLowerCase()
         );
         return category;
     }
 }
 
 export { CategoriesRepository };
+
+// Singleton ->  Criar apenas uma instancia global para a aplicacao
