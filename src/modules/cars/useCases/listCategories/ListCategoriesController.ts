@@ -1,0 +1,3 @@
+class ListCategoriesController {}
+
+export { ListCategoriesController };
