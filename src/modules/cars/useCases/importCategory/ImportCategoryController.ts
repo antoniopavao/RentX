@@ -1,0 +1,2 @@
+class ImportCategoryController {}
+export { ImportCategoryController };
