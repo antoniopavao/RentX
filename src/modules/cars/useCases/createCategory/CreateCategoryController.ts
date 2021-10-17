@@ -15,5 +15,3 @@ class CreateCategoryController {
     }
 }
 export { CreateCategoryController };
-
-// UseCases -> Regras de negocio da app
