@@ -18,6 +18,7 @@ container.registerSingleton<ISpecificationsRepository>(
     SpecificationsRepository
 );
 
+// IUsersRepository";"
 container.registerSingleton<IUsersRepository>(
     "UsersRepository",
     UsersRepository
