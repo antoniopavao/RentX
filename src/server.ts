@@ -1,6 +1,7 @@
 import express from "express";
 import swaggerUi from "swagger-ui-express";
 import "./database";
+import "dotenv/config";
 import "./shared/container";
 
 import { router } from "./routes";
