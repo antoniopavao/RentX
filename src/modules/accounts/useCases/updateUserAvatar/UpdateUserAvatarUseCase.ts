@@ -1,0 +1,2 @@
+class UpdateUserAvatarUseCase {}
+export { UpdateUserAvatarUseCase };

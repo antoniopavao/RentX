@@ -1,0 +1,2 @@
+class UpdateUserAvatarController {}
+export { UpdateUserAvatarController };
