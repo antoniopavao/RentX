@@ -3,6 +3,7 @@ import multer from "multer";
 import { resolve } from "path";
 
 export default {
+    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
     upload(folder: string) {
         return {
             storage: multer.diskStorage({
