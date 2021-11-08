@@ -1,15 +1,8 @@
-describe("Create category", () => {
-    it("should return 4", () => {
-        const soma = 2 + 2;
-        const result = 4;
+import { CreateCategoryUseCase } from "./CreateCategoryUseCase";
 
-        expect(soma).toBe(result);
-    });
-
-    it("espero que 2 + 2 nao seja 5", () => {
-        const soma = 2 + 2;
-        const result = 5;
-
-        expect(soma).not.toBe(result);
+describe("Create a new category", () => {
+    it("Should create a new category", () => {
+        const createCategory = new CreateCategoryUseCase();
+        return createCategory;
     });
 });
