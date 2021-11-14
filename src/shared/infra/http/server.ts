@@ -5,7 +5,7 @@ import "../typeorm";
 import "dotenv/config";
 import "@shared/container";
 
-import { AppError } from "@errors/AppError";
+import { AppError } from "@shared/errors/AppError";
 
 import swaggerFile from "../../../swagger.json";
 import { router } from "./routes";

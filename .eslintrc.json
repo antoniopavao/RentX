@@ -17,11 +17,12 @@
     },
     "plugins": [
         "@typescript-eslint",
-        "eslint-plugin-import-helpers",
-        "prettier"
+        "prettier",
+        "eslint-plugin-import-helpers"
     ],
     "rules": {
         "camelcase": "off",
+        "prettier/prettier": "error",
         "import/no-unresolved": "error",
         "@typescript-eslint/naming-convention": [
             "error",
@@ -58,15 +59,12 @@
         ],
         "import/no-extraneous-dependencies": [
             "error",
-            { "devDependencies": true }
-        ],
-        "prettier/prettier": "error"
+            { "devDependencies": ["**/*.spec.js"] }
+        ]
     },
     "settings": {
         "import/resolver": {
-            "node": {
-                "extensions": [".js", ".jsx", ".ts", ".tsx"]
-            }
+            "typescript": {}
         }
     }
 }
