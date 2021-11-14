@@ -3,10 +3,11 @@ import "express-async-errors";
 import swaggerUi from "swagger-ui-express";
 import "../typeorm";
 import "dotenv/config";
-import "../../container";
+import "@shared/container";
+
+import { AppError } from "@errors/AppError";
 
 import swaggerFile from "../../../swagger.json";
-import { AppError } from "../../errors/AppError";
 import { router } from "./routes";
 
 const app = express();
