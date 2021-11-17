@@ -51,6 +51,16 @@ export class CreateCars1637150000625 implements MigrationInterface {
                         default: "now()",
                     },
                 ],
+                foreignKeys: [
+                    {
+                        name: "FKCategoryCar",
+                        referencedTableName: "categories",
+                        referencedColumnNames: ["id"],
+                        columnNames: ["category_id"],
+                        onDelete: "SET NULL",
+                        onUpdate: "SET NULL",
+                    },
+                ],
             })
         );
     }
