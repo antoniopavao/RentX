@@ -28,7 +28,9 @@ class CreateCarUseCase {
         brand,
         category_id,
     }: IRequest): Promise<void> {
-        const carAlreadyRegistered = await this.carsRepository.findByName(name);
+        const carAlreadyRegistered = await this.carsRepository.findCarByName(
+            name
+        );
 
         if (carAlreadyRegistered) {
             throw new AppError("Car already registered", 401);
