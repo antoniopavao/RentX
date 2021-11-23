@@ -14,10 +14,10 @@ describe("Create a car specification", () => {
         );
     });
 
-    it("should be able create a new car specification to the car", async () => {
+    it("should be able to create a new specification to the car", async () => {
         const car = await carsRepositoryInMemory.create({
             name: "Car name test",
-            description: "Descripton car",
+            description: "Description car",
             daily_rate: 100,
             license_plate: "123-5678",
             fine_amount: 60,
