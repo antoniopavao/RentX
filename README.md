@@ -12,23 +12,21 @@
 # List cars
 
 **RF**
-[] Should be able to list all available cars
-[] Should be able to list all available cars filtered by category name
-[] Should be able to list all available cars filtered by brand
-[] Should be able to list all available cars filtered by cars names
+[x] Should be able to list all available cars
+[x] Should be able to list all available cars filtered by category name
+[x] Should be able to list all available cars filtered by brand
+[x] Should be able to list all available cars filtered by cars names
 
 **RN**
-User do not need be logged to see all available cars
+[] User do not need be logged to see all available cars
 
 # Register a car specification
 
 **RF**
 [] Should be able to register a new car specification
-[] Should be able to list all specifications
-[] Should be able to list all cars
 
 **RN**
-Only admin users can register a new specification
+[] Only admin users can register a new specification
 [] Should not be able to register a new specification if the car does not exist
 [] Should not be able to register a specification if it already exists for the same car
 
