@@ -23,27 +23,26 @@
 # Register a car specification
 
 **RF**
-[] Should be able to register a new car specification
+[X] Should be able to register a new car specification
 
 **RN**
-[] Only admin users can register a new specification
-[] Should not be able to register a new specification if the car does not exist
-[] Should not be able to register a specification if it already exists for the same car
+[X] Only admin users can register a new specification
+[X] Should not be able to register a new specification if the car does not exist
+[X] Should not be able to register a specification if it already exists for the same car
 
 # Register car images
 
 **RF**
 
-[] Should be able to register a new car image
-[] Should be able to list all cars
+[X] Should be able to register a new car image
 
 **RNF**
 
-[] Should use multer for file upload
+[X] Should use multer for file upload
 
 **RN**
 
-[] User should be able to register more than one image
+[X] User should be able to register more than one image
 
 # Car rental
 

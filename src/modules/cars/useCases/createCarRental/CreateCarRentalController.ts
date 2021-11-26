@@ -1,0 +1,2 @@
+class CreateCarRentalController {}
+export { CreateCarRentalController };

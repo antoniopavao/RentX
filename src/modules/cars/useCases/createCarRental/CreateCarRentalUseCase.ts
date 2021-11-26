@@ -1,0 +1,2 @@
+class CreateCarRentalUseCase {}
+export { CreateCarRentalUseCase };
