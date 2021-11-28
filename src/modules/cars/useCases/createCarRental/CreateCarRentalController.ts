@@ -1,2 +1,0 @@
-class CreateCarRentalController {}
-export { CreateCarRentalController };
