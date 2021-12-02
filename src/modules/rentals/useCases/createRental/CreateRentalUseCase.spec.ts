@@ -1,20 +1,25 @@
 import dayjs from "dayjs";
 
 import { RentalsRepositoryInMemory } from "@modules/rentals/repositories/in-memory/RentalsRepositoryInMemory";
+import { DayJsDateProvider } from "@shared/container/providers/DateProvider/implementations/DayJsDateProvider";
 import { AppError } from "@shared/errors/AppError";
 
 import { CreateRentalUseCase } from "./CreateRentalUseCase";
 
 let createRentalUseCase: CreateRentalUseCase;
 let rentalsRepositoryInMemory: RentalsRepositoryInMemory;
+let dayJsDateProvider: DayJsDateProvider;
 
 describe("Create Rental", () => {
     const dayAdd24H = dayjs().add(1, "day").toDate();
 
     beforeEach(() => {
         rentalsRepositoryInMemory = new RentalsRepositoryInMemory();
+        dayJsDateProvider = new DayJsDateProvider();
+
         createRentalUseCase = new CreateRentalUseCase(
-            rentalsRepositoryInMemory
+            rentalsRepositoryInMemory,
+            dayJsDateProvider
         );
     });
 
@@ -57,6 +62,16 @@ describe("Create Rental", () => {
                 user_id: "12345",
                 car_id: "test",
                 expected_return_date: dayAdd24H,
+            });
+        }).rejects.toBeInstanceOf(AppError);
+    });
+
+    it("Should not be able to create a new rental with invalid return time", async () => {
+        expect(async () => {
+            await createRentalUseCase.execute({
+                user_id: "12345",
+                car_id: "test",
+                expected_return_date: dayjs().toDate(),
             });
         }).rejects.toBeInstanceOf(AppError);
     });
