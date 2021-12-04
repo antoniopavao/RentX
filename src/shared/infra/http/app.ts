@@ -34,6 +34,4 @@ app.use(
     }
 );
 
-const port = 3333;
-
 export { app };
