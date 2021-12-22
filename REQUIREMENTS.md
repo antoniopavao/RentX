@@ -47,7 +47,7 @@
 # Car rental
 
 **RF**
-[] Should be able to rent a car
+[X] Should be able to rent a car
 
 **RNF**
 
@@ -55,3 +55,16 @@
 [] The minimum time to rent a car must be 1 day (24h)
 [x] Should not be able to register a new rent if the user already have rented a car
 [x] Should not be able to register a new rent if the car has already been rented
+
+# Return Car
+
+**RF**
+[] Should be able to return a car
+
+**RN**
+[] If the car is returned with less than 24 hours, should be charged complete daily.
+[] When the return occurs, the car should be available for another rental
+[] When the return occurs, the user should be able to rent another car
+[] When the return occurs, should be charged the total rent amount.
+[] If the return date is more than the expected return date, a fine per day of delay should be charged.
+[] If the user has any fines, the value should be added to the total rent amount.
