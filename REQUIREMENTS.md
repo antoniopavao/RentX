@@ -52,9 +52,10 @@
 **RNF**
 
 **RN**
-[] The minimum time to rent a car must be 1 day (24h)
+[x] The minimum time to rent a car must be 1 day (24h)
 [x] Should not be able to register a new rent if the user already have rented a car
 [x] Should not be able to register a new rent if the car has already been rented
+[] If the car has already been rented, the status should be unavailable
 
 # Return Car
 
