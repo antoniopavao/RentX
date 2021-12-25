@@ -1,6 +1,7 @@
 import { inject, injectable } from "tsyringe";
 
 import { ICarsRepository } from "@modules/cars/repositories/ICarsRepository";
+import { Rental } from "@modules/rentals/infra/typeorm/entities/Rental";
 import { IRentalsRepository } from "@modules/rentals/repositories/IRentalsRepository";
 import { IDateProvider } from "@shared/container/providers/DateProvider/IDateProvider";
 import { AppError } from "@shared/errors/AppError";
@@ -20,7 +21,7 @@ class DevolutionRentalUseCase {
         @inject("CarsRepository")
         private carsRepository: ICarsRepository
     ) {}
-    async execute({ id, user_id }: IRequest) {
+    async execute({ id, user_id }: IRequest): Promise<Rental> {
         const rental = await this.rentalsRepository.findById(id);
         const car = await this.carsRepository.findById(id);
         const minimum_daily = 1;
