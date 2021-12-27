@@ -11,7 +11,7 @@ class DevolutionRentalController {
             DevolutionRentalUseCase
         );
 
-        return response.json(rental);
+        // return response.json(updateAvailableRental);
     }
 }
 
