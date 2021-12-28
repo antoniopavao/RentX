@@ -22,6 +22,7 @@ class DevolutionRentalUseCase {
         private carsRepository: ICarsRepository
     ) {}
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     async execute({ id, user_id }: IRequest): Promise<Rental> {
         const rental = await this.rentalsRepository.findById(id);
         const car = await this.carsRepository.findById(rental.car_id);
