@@ -71,3 +71,9 @@
 [x] If the user has any fines, the value should be added to the total rent amount.
 
 # List user rentals
+
+**RF**
+[] Should be able to list user rentals
+
+**RN**
+[] The user must be authenticated
