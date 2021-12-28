@@ -1,0 +1,2 @@
+class ListRentalByUserController {}
+export { ListRentalByUserController };

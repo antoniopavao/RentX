@@ -1,0 +1,2 @@
+class ListRentalByUserUseCase {}
+export { ListRentalByUserUseCase };
