@@ -18,6 +18,7 @@ describe("Create Rental", () => {
     beforeEach(() => {
         rentalsRepositoryInMemory = new RentalsRepositoryInMemory();
         dayJsDateProvider = new DayJsDateProvider();
+        carsRepositoryInMemory = new CarsRepositoryInMemory();
 
         createRentalUseCase = new CreateRentalUseCase(
             rentalsRepositoryInMemory,
