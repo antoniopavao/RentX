@@ -28,13 +28,13 @@ class AuthenticateUserUseCase {
         const user = await this.usersRepository.findByEmail(email);
 
         if (!user) {
-            throw new AppError(` Email or password incorrect`, 401);
+            throw new AppError("User does not exist");
         }
 
         const passwordMatch = await compare(password, user.password);
 
         if (!passwordMatch) {
-            throw new AppError(`Email or password incorrect`, 401);
+            throw new AppError("Wrong email or password", 400);
         }
 
         const token = sign({}, process.env.JWT_SECRET_KEY, {
