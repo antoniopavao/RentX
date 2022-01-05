@@ -1,0 +1,3 @@
+class RefreshTokenUseCase {}
+
+export { RefreshTokenUseCase };
