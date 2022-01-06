@@ -73,7 +73,19 @@
 # List user rentals
 
 **RF**
-[] Should be able to list user rentals
+[x] Should be able to list user rentals
 
 **RN**
-[] The user must be authenticated
+[x] The user must be authenticated
+
+# Recover password
+
+**RF**
+
+[] Should be able to recover password using the user's email
+[] User must receive an email with the instructions to recover the password
+[] User must be able to insert a new password
+
+**RN**
+[] User needs to create a new password
+[] The link sent to recover the password must expire in 3 hours
