@@ -14,10 +14,10 @@ class SendForgotPasswordMailUseCase {
         private usersRepository: IUsersRepository,
         @inject("UsersTokensRepository")
         private usersTokensRepository: IUsersTokensRepository,
-        @inject("DayJsDateProvider")
-        private dateProvider: IDateProvider,
         @inject("EtherealMailProvider")
-        private mailProvider: IMailProvider
+        private mailProvider: IMailProvider,
+        @inject("DayJsDateProvider")
+        private dateProvider: IDateProvider
     ) {}
     async execute(email: string): Promise<void> {
         const user = await this.usersRepository.findByEmail(email);
