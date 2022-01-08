@@ -1,0 +1,2 @@
+class ResetUserPasswordUseCase {}
+export { ResetUserPasswordUseCase };

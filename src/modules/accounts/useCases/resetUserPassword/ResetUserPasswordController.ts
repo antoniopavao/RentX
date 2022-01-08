@@ -1,0 +1,2 @@
+class ResetUserPasswordController {}
+export { ResetUserPasswordController };
