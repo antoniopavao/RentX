@@ -1,5 +1,7 @@
 import { ICreateUserDTO } from "@modules/accounts/dtos/ICreateUsersDTO";
 import { UsersRepositoryInMemory } from "@modules/accounts/repositories/in-memory/UsersRepositoryInMemory";
+import { UsersTokensRepositoryInMemory } from "@modules/accounts/repositories/in-memory/UsersTokensRepositoryInMemory";
+import { IDateProvider } from "@shared/container/providers/DateProvider/IDateProvider";
 import { AppError } from "@shared/errors/AppError";
 
 import { CreateUserUseCase } from "../createUser/CreateUserUseCase";
@@ -10,12 +12,16 @@ import "dotenv/config";
 let authenticateUserUseCase: AuthenticateUserUseCase;
 let createUserUseCase: CreateUserUseCase;
 let usersRepositoryInMemory: UsersRepositoryInMemory;
-
+let usersTokensRepositoryInMemory: UsersTokensRepositoryInMemory;
+let dateProvider: IDateProvider;
 describe("Authenticate user", () => {
     beforeEach(() => {
         usersRepositoryInMemory = new UsersRepositoryInMemory();
+        usersTokensRepositoryInMemory = new UsersTokensRepositoryInMemory();
         authenticateUserUseCase = new AuthenticateUserUseCase(
-            usersRepositoryInMemory
+            usersRepositoryInMemory,
+            usersTokensRepositoryInMemory,
+            dateProvider
         );
         createUserUseCase = new CreateUserUseCase(usersRepositoryInMemory);
     });
