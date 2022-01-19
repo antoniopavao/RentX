@@ -44,6 +44,6 @@ describe("Create a new category", () => {
                 name: category.name,
                 description: category.description,
             })
-        ).rejects.toEqual(new AppError("Category already exists"));
+        ).rejects.toEqual(new AppError("Category already exists", 400));
     });
 });
