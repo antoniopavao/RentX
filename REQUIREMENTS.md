@@ -18,7 +18,7 @@
 [x] Should be able to list all available cars filtered by cars names
 
 **RN**
-[] User do not need be logged to see all available cars
+[x] User do not need be logged to see all available cars
 
 # Register a car specification
 
