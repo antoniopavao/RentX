@@ -1,0 +1,2 @@
+class ProfileUserUseCase {}
+export { ProfileUserUseCase };
