@@ -25,6 +25,6 @@ usersRoutes.patch(
     updateUserAvatarController.handle
 );
 
-usersRoutes.get("/", ensureAuthenticated, profileUserController.handle);
+usersRoutes.get("/profile", ensureAuthenticated, profileUserController.handle);
 
 export { usersRoutes };
